@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ 
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Java Script</title>
+    <h1>Musicians guess by Prudhvi</h1>
+    
+
+      
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+ 
+<h2>Getting input</h2>
+
+
+<label for="SecretMusician">Enter the secret musician name </label>
+    <input type ="password" id="SecretMusician" name="SecretMusician" min=10 max=50 step=2 value="John Lennon"> <br>
+
+    <label for="GuessMusician">Guess the musician </label>
+    <input type ="text" id="GuessMusician" name="GuessMusician" autofocus> <br>
+
+    <input type="button" onclick="checkGuess()" value="Check the guess ">
+</form>
+<p id="result">This text will be replaced </p>
+
+<script> 
+    correct=0;
+    wrong=0;
+    function checkGuess(){
+        console.log("Check the guess")
+        s = document.getElementById("SecretMusician").value
+        g = document.getElementById("GuessMusician").value
+       if(s==g){
+        correct+=1
+        alert("You got it right")
+       }
+       else{
+        wrong+=1
+        alert("Wrong Musician")
+       }
+        
+        result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
+    }
+    </script>
+    </body>
+    </html>  
